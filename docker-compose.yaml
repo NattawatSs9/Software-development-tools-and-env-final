@@ -11,17 +11,3 @@ services:
       dockerfile: DockerFile
     ports:
       - 3001:3001
-  jenkins:
-    image: 'jenkins/jenkins:lts'
-    container_name: 'jenkins'
-    restart: always
-    ports:
-      - '8090:8080'
-      - '50000:50000'
-    volumes:
-      - jenkins-data:/etc/gitlab
-      - /var/run/docker.sock:/var/run/docker.sock
-
-volumes:
-  jenkins-data:
-    name: jenkins-data
