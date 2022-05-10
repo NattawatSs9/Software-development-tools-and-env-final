@@ -10,7 +10,7 @@ pipeline {
         stage('Download dependency') {
             steps {
                 dir('frontend') {
-                    sh 'npm install'
+                    sh "/usr/bin/npm install"
                 }
             }
         }
