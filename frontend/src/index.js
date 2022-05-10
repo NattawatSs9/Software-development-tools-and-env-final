@@ -4,16 +4,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Hello from "./routes/hello";
-import HelloWorld from "./routes/helloworld";
+import Form from "./routes/form";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="hello" element={<Hello />}/>
-      <Route path="hello/:world" element={<HelloWorld />} />
+      <Route path="vaccine/registration" element={<Form />}/>
     </Routes>
   </BrowserRouter>
 );
