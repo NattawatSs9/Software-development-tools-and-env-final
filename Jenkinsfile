@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+          image 'node:16.14-alpine'
+        }
+     }
 
     stages {
         stage('Pull code from branch main') {
@@ -10,7 +14,7 @@ pipeline {
         stage('Download dependency') {
             steps {
                 dir('frontend') {
-                    sh "/usr/bin/npm install"
+                    sh "npm install"
                 }
             }
         }
